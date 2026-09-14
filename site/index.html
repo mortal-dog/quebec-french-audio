@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Québec French</title>
+<meta name="description" content="Québec French — an Android app for learning the French spoken in Québec.">
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #ffffff; --fg: #1c1c1e; --muted: #5c5c66;
+    --rule: #e2e2e8; --accent: #002395;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #131316; --fg: #e8e8ec; --muted: #a0a0ac; --rule: #2c2c33; --accent: #8aa8ff; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 4rem 1.25rem;
+    background: var(--bg); color: var(--fg);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    -webkit-text-size-adjust: 100%;
+  }
+  main { max-width: 34rem; margin: 0 auto; }
+  h1 { font-size: 2rem; margin: 0 0 .5rem; letter-spacing: -0.02em; }
+  h2 { font-size: 1.15rem; margin: 2.25rem 0 .5rem; }
+  code { font-size: .9em; }
+  p { margin: 0 0 1.25rem; }
+  .sub { color: var(--muted); }
+  a { color: var(--accent); }
+  ul { margin: 0; padding: 0; list-style: none; }
+  li { padding: .55rem 0; border-top: 1px solid var(--rule); }
+</style>
+</head>
+<body>
+<main>
+  <h1>Québec French</h1>
+  <p class="sub">A free web app for learning the French actually spoken in Québec. It works in
+  any browser, installs on a phone like an app, and needs no account.</p>
+  <p><a href="https://quebec-french.doctornova.net">Open Québec French</a></p>
+
+  <h2>What it does</h2>
+  <ul>
+    <li><strong>Dictionary</strong>: look up French words in any form, with Québec pronunciation (IPA) and English meanings.</li>
+    <li><strong>Flashcards</strong>: spaced-repetition vocabulary cards, new words starting at CEFR level A1.</li>
+    <li><strong>Lessons</strong>: pronunciation, grammar and everyday themes, with Québec usage throughout.</li>
+    <li><strong>Audio</strong>: an optional pack of spoken clips for every word and example.</li>
+    <li><strong>Achievements</strong>: study time, words learned and your CEFR level.</li>
+  </ul>
+
+  <h2>Optional Google sign-in</h2>
+  <p>Everything works without signing in; progress stays in your browser. If you choose
+  “Sign in with Google” on the Achievements page, the app saves your card progress and study
+  time to a private, hidden app folder in <em>your own</em> Google Drive, so your devices can
+  add them up. It uses the <code>drive.appdata</code> permission, which reaches only that
+  folder, and your email address, shown so you know which account syncs. There is no server of
+  ours; nothing is sent to the developer. Details are in the privacy policy.</p>
+
+  <ul>
+    <li><a href="/privacy/">Privacy policy</a></li>
+    <li><a href="https://github.com/mortal-dog/quebec-french-audio">Audio pack releases</a></li>
+    <li>Contact: <a href="mailto:french@doctornova.net">french@doctornova.net</a></li>
+  </ul>
+</main>
+</body>
+</html>
