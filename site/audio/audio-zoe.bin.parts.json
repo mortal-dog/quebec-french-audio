@@ -1,0 +1,28 @@
+{
+  "blob": "audio-zoe.bin",
+  "voiceId": "zoe",
+  "totalBytes": 436409997,
+  "sha256": "faa228fb710e6acbeccde411f4eacdce1d76ae0abbee39d06b6f258543962ef9",
+  "parts": [
+    {
+      "name": "audio-zoe.bin.000",
+      "bytes": 94371840
+    },
+    {
+      "name": "audio-zoe.bin.001",
+      "bytes": 94371840
+    },
+    {
+      "name": "audio-zoe.bin.002",
+      "bytes": 94371840
+    },
+    {
+      "name": "audio-zoe.bin.003",
+      "bytes": 94371840
+    },
+    {
+      "name": "audio-zoe.bin.004",
+      "bytes": 58922637
+    }
+  ]
+}
