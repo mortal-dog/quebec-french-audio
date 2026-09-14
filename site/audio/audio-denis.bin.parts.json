@@ -1,0 +1,20 @@
+{
+  "blob": "audio-denis.bin",
+  "voiceId": "denis",
+  "totalBytes": 251585751,
+  "sha256": "83234aacb5182d64fd7812f21bbb934c1b6c2d398385b04f538c1118700cd49f",
+  "parts": [
+    {
+      "name": "audio-denis.bin.000",
+      "bytes": 94371840
+    },
+    {
+      "name": "audio-denis.bin.001",
+      "bytes": 94371840
+    },
+    {
+      "name": "audio-denis.bin.002",
+      "bytes": 62842071
+    }
+  ]
+}
