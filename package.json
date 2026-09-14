@@ -1,0 +1,9 @@
+{
+  "name": "quebec-french-audio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Audio packs for the Québec French app, and the site that hosts them.",
+  "scripts": {
+    "git:squash": "./scripts/git-squash.sh"
+  }
+}

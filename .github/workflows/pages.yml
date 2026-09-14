@@ -1,0 +1,60 @@
+# Publishes everything under site/ to https://french.doctornova.net/
+#
+# The repository's release assets are NOT part of the site — only the site/ directory is
+# uploaded — but site/audio/ now holds ~511 MB of its own, and that is deliberate.
+#
+# WHY THE PACKS ARE HERE AS WELL AS IN THE RELEASE
+# The Android app downloads audio-<voice>.bin straight from the release. The WEB app
+# cannot: GitHub serves release assets with no Access-Control-Allow-Origin header, on the
+# redirect and on the final response alike, so a browser refuses the request before any
+# bytes arrive. Pages does send it, and answers range requests, so the same bytes are
+# published a second way — in <=90 MB pieces, because git rejects files over 100 MB, with
+# a .parts.json manifest the web app reads first. See doc/architecture.md §13.18 in the
+# app repo, and scripts/tts/split-pack.mjs which produces them.
+#
+# TWO LIMITS TO WATCH
+#   * A published Pages site may not exceed 1 GB. This is about half of that, so a third
+#     voice does not fit without moving the packs off Pages.
+#   * Pages bandwidth is soft-capped at 100 GB/month. A full pack is ~250 MB, so roughly
+#     370 offline downloads a month. Clip-by-clip playback is ~8 KB and irrelevant here.
+name: Deploy site
+
+# Every push to main, with NO paths filter — and that is deliberate.
+#
+# This repo records work with `pnpm git:squash`, which builds an ORPHAN commit and
+# force-pushes it. The new commit shares no ancestor with the old one, so GitHub has no
+# commit range to compute changed paths from and a `paths:` filter does not match — the
+# 2026-09-14 squash that added site/audio/ pushed cleanly and triggered nothing, and the
+# deploy had to be started by hand. A filter that silently fails on this repo's ONLY way of
+# committing is worse than no filter: the tree is replaced wholesale each time anyway, so
+# there was never much for it to skip.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Never run two deployments at once, and never cancel one in flight — a half-finished
+# deploy would take the privacy policy offline, and Google Play checks that URL.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - id: deployment
+        uses: actions/deploy-pages@v4
