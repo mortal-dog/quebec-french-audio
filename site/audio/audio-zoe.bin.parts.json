@@ -1,0 +1,59 @@
+{
+  "blob": "audio-zoe.bin",
+  "voiceId": "zoe",
+  "totalBytes": 1080768739,
+  "sha256": "36040f3d8575caadf9998cb2276fb3880a5114b0935ae4997c295a342fa2d79b",
+  "parts": [
+    {
+      "name": "audio-zoe.bin.000",
+      "bytes": 94371840
+    },
+    {
+      "name": "audio-zoe.bin.001",
+      "bytes": 94371840
+    },
+    {
+      "name": "audio-zoe.bin.002",
+      "bytes": 94371840
+    },
+    {
+      "name": "audio-zoe.bin.003",
+      "bytes": 94371840
+    },
+    {
+      "name": "audio-zoe.bin.004",
+      "bytes": 94371840
+    },
+    {
+      "name": "audio-zoe.bin.005",
+      "bytes": 94371840
+    },
+    {
+      "name": "audio-zoe.bin.006",
+      "bytes": 94371840
+    },
+    {
+      "name": "audio-zoe.bin.007",
+      "bytes": 94371840
+    },
+    {
+      "name": "audio-zoe.bin.008",
+      "bytes": 94371840
+    },
+    {
+      "name": "audio-zoe.bin.009",
+      "bytes": 94371840,
+      "url": "https://mortal-dog.github.io/quebec-french-audio-2/audio/audio-zoe.bin.009"
+    },
+    {
+      "name": "audio-zoe.bin.010",
+      "bytes": 94371840,
+      "url": "https://mortal-dog.github.io/quebec-french-audio-2/audio/audio-zoe.bin.010"
+    },
+    {
+      "name": "audio-zoe.bin.011",
+      "bytes": 42678499,
+      "url": "https://mortal-dog.github.io/quebec-french-audio-2/audio/audio-zoe.bin.011"
+    }
+  ]
+}
